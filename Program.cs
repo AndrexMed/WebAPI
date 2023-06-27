@@ -10,7 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldServices>();
-builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldServices());
+builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldServices()); //Se usa cuando el constructor espera argumentos!
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ITareasService, TareasService>();
 
 var app = builder.Build();
 

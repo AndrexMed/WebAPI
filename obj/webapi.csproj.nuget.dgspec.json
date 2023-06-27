@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj": {}
+    "c:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj": {
+    "c:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj",
+        "projectUniqueName": "c:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj",
         "projectName": "webapi",
-        "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj",
+        "projectPath": "c:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\webapi.csproj",
         "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\obj\\",
+        "outputPath": "c:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\C#\\webapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",
