@@ -10,16 +10,13 @@ public class TimeMiddleware
     public async Task Invoke(Microsoft.AspNetCore.Http.HttpContext context)
     {
         //Invocamos el metodo que sigue, y luego ejecutamos nuestro middleware
-        //await next(context);
+        await next(context);
 
         if (context.Request.Query.Any(p => p.Key == "time"))
         {
             await context.Response.WriteAsync(DateTime.Now.ToShortTimeString());
             return;
         }
-
-        await next(context);
-
     }
 
 }
