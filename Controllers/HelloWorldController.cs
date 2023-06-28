@@ -12,17 +12,27 @@ namespace webapi.Controllers
     public class HelloWorldController : ControllerBase
     {
         IHelloWorldService helloWorldService;
+        TareasContext tareasContext;
 
         //Constructor
-        public HelloWorldController(IHelloWorldService helloWorld)
+        public HelloWorldController(IHelloWorldService helloWorld, TareasContext tareasContext)
         {
             helloWorldService = helloWorld;
+            this.tareasContext = tareasContext;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(helloWorldService.GetHelloWorld());
+        }
+
+        [HttpGet]
+        [Route("createdb")]
+        public IActionResult CreateDatabase()
+        {
+            tareasContext.Database.EnsureCreated();
+            return Ok();
         }
     }
 }

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using webapi.Models;
 using webapi.Services;
@@ -27,7 +23,7 @@ namespace webapi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Categoria categoria){
             categoriaService.Save(categoria);
-            return Ok();
+            return Ok(categoria);
         }
 
         [HttpPut("{id}")]

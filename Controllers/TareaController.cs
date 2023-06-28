@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using webapi.Services;
 using webapi.Models;
 
 namespace webapi.Controllers
 {
+    [Route("api/[controller]")]
     public class TareaController : ControllerBase
     {
         ITareasService tareasService;
@@ -24,7 +21,7 @@ namespace webapi.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Tarea tarea){
             tareasService.Save(tarea);
-            return Ok();
+            return Ok(tarea);
         }
 
         [HttpPut("{id}")]
@@ -34,7 +31,7 @@ namespace webapi.Controllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
             tareasService.Delete(id);

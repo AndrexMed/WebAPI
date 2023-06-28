@@ -1,3 +1,4 @@
+using webapi;
 using webapi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSqlServer<TareasContext>(builder.Configuration.GetConnectionString("cnTarifas"));
 
 //builder.Services.AddScoped<IHelloWorldService, HelloWorldServices>();
 builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldServices()); //Se usa cuando el constructor espera argumentos!
