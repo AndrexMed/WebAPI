@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using webapi.Models;
 
 namespace webapi.Services
@@ -11,7 +7,8 @@ namespace webapi.Services
         TareasContext context;
 
         //Constructor
-        public CategoriaService(TareasContext dbContext){
+        public CategoriaService(TareasContext dbContext)
+        {
             this.context = dbContext;
         }
 
@@ -20,16 +17,19 @@ namespace webapi.Services
             return context.Categorias;
         }
 
-        public async Task Save(Categoria categoria){
+        public async Task Save(Categoria categoria)
+        {
             context.Add(categoria);
             await context.SaveChangesAsync();
         }
 
-         public async Task Update(Guid id, Categoria categoria){
+        public async Task Update(Guid id, Categoria categoria)
+        {
 
             var categoriaEncontrada = context.Categorias.Find(id);
 
-            if (categoriaEncontrada != null){
+            if (categoriaEncontrada != null)
+            {
                 categoriaEncontrada.Nombre = categoria.Nombre;
                 categoriaEncontrada.Descripcion = categoria.Descripcion;
                 categoriaEncontrada.Peso = categoria.Peso;
@@ -38,11 +38,13 @@ namespace webapi.Services
             }
         }
 
-        public async Task Delete(Guid id){
+        public async Task Delete(Guid id)
+        {
 
             var categoriaEncontrada = context.Categorias.Find(id);
 
-            if (categoriaEncontrada != null){
+            if (categoriaEncontrada != null)
+            {
 
                 context.Remove(categoriaEncontrada);
 
